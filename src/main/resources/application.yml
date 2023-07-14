@@ -1,0 +1,26 @@
+server: port=8080
+
+spring:
+  application:
+    name: TelrosTestcaseApplication
+  datasource:
+    url: jdbc:postgresql://localhost:5432/telrosDb
+    username: postgres
+    password: 123
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        format_sql: true
+  flyway:
+    enabled: false
+app:
+  jwtSecret: ljhdslghiopbmispvgspmvgjcaqdfs039kojckljvlk9949iUKKKNJK002939KK
+  jwtExpirationMs: 864000000
+storage:
+  location: ./storage
